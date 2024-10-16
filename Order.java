@@ -86,10 +86,19 @@ public class Order
     /**
      * Show the final information about the order, including the sender's name, the 
      * destination and name of the deliveryPerson who delivers it.
+     *  Constructor for objects of class Order
+     * @param sendingName The sender's name.
+     * @param location The pickup location, must not be null.
+     * @param destination The destination location, must not be null.
+     * @param deliveryTime The hour of delivery.
+     * @param weight  The order's weight
+     * @param destinationName The name of the person receiving the order.
+     * 
      */
     public String showFinalInfo()
     {
         // TODO
+        System.out.printf("Order at: ", deliveryTime, " from: ", sendingName, " to: ", destinationName );
         return "";
     }
     /**

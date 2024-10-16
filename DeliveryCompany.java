@@ -11,7 +11,8 @@ public class DeliveryCompany
 {
     // TODO definir todos sus campos
     private String name;  //nombre de la compañía
-
+    private List <DeliveryPerson> deliveryPersons;
+    private WareHouse almacen;
     /**
      * Constructor for objects of class DeliveryCompany
      */
@@ -19,6 +20,7 @@ public class DeliveryCompany
     {
         this.name = name;
         //TODO implementar el resto del constructor 
+        
 
     }
 
@@ -35,9 +37,14 @@ public class DeliveryCompany
      */
     public List<DeliveryPerson> getDeliveryPersons()
     {       
-        //TODO implementar el método 
-
-        return null;
+        if (deliveryPersons != null)
+        {
+            return this.deliveryPersons;
+        } 
+        else
+        {
+            throw new NullPointerException("getDeliveryPersons ");
+        }
     }
 
     /**
@@ -45,9 +52,14 @@ public class DeliveryCompany
      */
     public List<Order> getOrders()
     {
-        //TODO implementar el método 
-
-        return null;
+         if (this.almacen != null)
+        {
+            return this.almacen.getOrders();
+        } 
+        else
+        {
+            throw new NullPointerException("gerOrders ");
+        }
     }
 
     /**
@@ -55,7 +67,7 @@ public class DeliveryCompany
      */
     public void addDeliveryPerson(DeliveryPerson dp)
     {
-        //TODO implementar el método 
+        deliveryPersons.add(dp);
     }
 
     /**
@@ -64,7 +76,7 @@ public class DeliveryCompany
      */
     public void addOrder(Order order)
     {
-        //TODO implementar el método 
+        this.almacen.addOrder(order);
 
     }
 
@@ -74,8 +86,14 @@ public class DeliveryCompany
      */
     private DeliveryPerson getDeliveryPerson()
     {
-        //TODO implementar el método 
-
+         // if (this.deliveryPersons != null)
+        // {
+            // return this.almacen.getOrders();
+        // } 
+        // else
+        // {
+            // throw new NullPointerException("gerOrders ");
+        // }
         return null;
     }
 

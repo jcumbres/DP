@@ -8,17 +8,18 @@
 public class DeliveryPerson 
 {
     // The Delivery Company of this DeliveryPerson.
-    public DeliveryCompany company;   //TODO cambiar a private
+    private DeliveryCompany company;   //TODO cambiar a private
     // Where the person is.
-    public Location location;     //TODO cambiar a private
+    private Location location;     //TODO cambiar a private
     // Where the person is headed.
-    public  Location targetLocation;   //TODO cambiar a private
+    private  Location targetLocation;   //TODO cambiar a private
     // Record how often the person has nothing to do.
-    public int idleCount;       //TODO cambiar a private
+    private int idleCount;       //TODO cambiar a private
     //name of the delivery person
-    public String name; //TODO cambiar a private
+    private String name; //TODO cambiar a private
     //TODO añadir campos necesarios
-
+    private Order order; //objeto del pedido que esta repartiendo el repartidor.
+    private int ordersDelivered; //numero pedidos que ha entregado el repartidor.
     /**
      * Constructor of class DeliveryPerson
      * @param company The delivery person's company. Must not be null.
@@ -37,6 +38,9 @@ public class DeliveryPerson
         this.location = location;
         targetLocation = null;
         idleCount = 0;
+        this.name = name;
+        order = null;
+        ordersDelivered = 0 ;
         //TODO resto de inicializaciones pendientes
     }
 
@@ -155,8 +159,7 @@ public class DeliveryPerson
      */
     public boolean isFree()
     {
-        //TODO  implementar este método
-        return true;
+        return (this.order != null) ? false : true;
     }
 
     /**
@@ -165,6 +168,7 @@ public class DeliveryPerson
     public void notifyPickupArrival()
     {
         //TODO  implementar este método
+        //company.arrivedAtPickup(_dp_)
     }
 
     /**

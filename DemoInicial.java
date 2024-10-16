@@ -120,7 +120,7 @@ public class DemoInicial
         System.out.println("-->> Delivery persons of the company <<--");
         System.out.println("-->> ------------------------------- <<--");
         //TODO ordenar (por su nombre) y mostrar los objetos delivery persons
-        //Collections.sort(lista de objetos DeliveryPersons, new ComparadorNombreDeliveryPerson());
+       // Collections.sort(lista de objetos DeliveryPersons, new ComparadorNombreDeliveryPerson());
 
         System.out.println(" ");        
         System.out.println("-->> Orders to be picked up <<--");

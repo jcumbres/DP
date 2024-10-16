@@ -32,32 +32,8 @@ public class WareHouse
      * @param order  Añade un objeto tipo Order a la lista orders
      */
     public void addOrder(Order order)
-    {
-        if (orders.size()>0)
-        {
-            int index = 0 ;
-            Order orderAux;
-            while (index <= orders.size()-1)
-            {   
-                orderAux = orders.get(index);
-                if (order.getDeliveryTime()< orderAux.getDeliveryTime())
-                {
-                    orders.add(index,order);
-                    break;
-                }
-                else if ( order.getDeliveryTime()== orderAux.getDeliveryTime()){
-                    if (order.getDeliveryPersonName().compareTo(orderAux.getDeliveryPersonName()) < 0)
-                    {
-                         orders.add(index,order);
-                    }
-                }
-                index++;
-            }
-            orders.add(order);
-        }
-        else{
-            orders.add(order);
-        }
+    {    
+        orders.add(order);
     }
     /**
      * @return Devuelve la lista orders
